@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Me</title>
+
     <!-- BootstrapのCSS読み込み -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- jQuery読み込み -->
@@ -15,11 +16,11 @@
   </head>
   <body>
       
-    <div class="container" style="padding:20px 0">
+    <div class="container" style="background: #AAB7B8; padding:20px 0">
         <header>
         <div class="row">
           <div class="col-md-4">
-              <img src="dang.png" alt="" class="img-thumbnail" />
+              <img src="dang.png" alt="" class="img-circle" />
           </div>
           
           <div class="col-md-8">
@@ -27,38 +28,54 @@
                 <div class="container">
                   <ul class="nav nav-tabs" style="margin-bottom:15px;">
                     <li class="active"><a href="#Info" data-toggle="tab">Info</a></li>
-                    <li><a href="#Contact" data-toggle="tab">Contact</a></li>
+                    <li><a href="#contactMe" data-toggle="tab">Contact</a></li>
                     <li><a href="#Questions" data-toggle="tab">Questions</a></li>
                   </ul>
                 <div class="tab-content">
-                <div class="tab-pane active" id="Info">
-                    <div>
+                    <div class="tab-pane active" id="Info">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-1">Sex:</div>
-                            <div class="col-sm-11">Male</div>
+                            <div class="col-md-2 col-xs-4">Sex:</div>
+                            <div class="col-md-8 col-xs-8">Male</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-2">Brithday:</div>
-                            <div class="col-sm-10">Apr,1988</div>
+                            <div class="col-md-2 col-xs-4">Brithday:</div>
+                            <div class="col-md-8 col-xs-8">Apr,1988</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-2">Current city:</div>
-                            <div class="col-sm-10">Tokyo,Japan</div>
+                            <div class="col-md-2 col-xs-4">CurrentCity:</div>
+                            <div class="col-md-8 col-xs-8">Tokyo,Japan</div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-2">Hometown:</div>
-                            <div class="col-sm-10">ThaiBinh,VietNam</div>
+                            <div class="col-md-2 col-xs-4">Hometown:</div>
+                            <div class="col-md-8 col-xs-8">ThaiBinh,VietNam</div>
                         </div>
-                            <table class="table table-hover">
-                                 <tr><td>行-1</td><td>A-1</td><td>B-1</td></tr>
-                                 <tr><td>行-2</td><td>A-2</td><td>B-2</td></tr>
-                                 <tr><td>行-3</td><td>A-3</td><td>B-3</td></tr>
-                            </table>
+
                         <hr>
-                    </div>
+                        <div class="row">
+                            <div class="col-md-2 col-xs-4 text-left">Favourite hobby:</div>
+                            <div class="col-md-8 col-xs-8">
+                                <div>Watching TV</div>
+                                <div>Reading Book</div>
+                                <div>Travelling</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>ベトナム出身です。IT業界に興味を持ち、日本とベトナムのブリッジSEとしてで活動して行きたいと考えております。</p>
+                                <p>最近は、IT関係の仕事を探しているため、<span class="red">Ruby on Rails</span> を勉強して何かの実績を作りたいです。</p>
+                                <p>私のポートフォリオを見て気になった方は、<a href="#contactMe" data-toggle="tab">Contact</a>よりご連絡お願い致します。</p>
+                            </div>
+                        </div>
                 </div>
-                <div class="tab-pane" id="Contact">
+                </div>
+                
+                <div class="tab-pane" id="contactMe">
+                    <!--contactMe ?! :D oh yes;)-->
+                    <!--thường thì giá trị của id được đặt theo kiểu camelCase -->
                     
+                    <a href="https://www.facebook.com/NguyenHuuDang1988" target="_blank">Facebook</a>
                 </div>
                 
                 <div class="tab-pane" id="Questions">
@@ -87,15 +104,13 @@
                             </div>
                             
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Subject</label>
+                                <label class="col-sm-2 control-label" for="subjectForm">Subject</label>
                                 <div class="col-sm-4">
-                                <select class="form-control">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
-                                </select>
+                                    <select class="form-control" id="subjectForm">
+                                      <option>Business</option>
+                                      <option>Hobby</option>
+                                      <option>About VietNam</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -105,9 +120,10 @@
                             </div>
                               
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                  <button type="submit" class="btn btn-default">Sign in</button>
-                                </div>
+                                <!-- sao có đến 2 nút cùng type submit nhỉ? -->
+                                  <button type="reset" class="col-sm-offset-3 btn btn-default">Clear</button>
+                                  <button type="submit" class="col-sm-offset-1 btn btn-default">Send</button>
+                                
                             </div>
                     </form>
                 </div>
@@ -118,8 +134,8 @@
         </div>
         </header>
         
-        <footer>
-        <p>&copy; 2016 Ngyyen Huu Dang.</p>
+        <footer class="text-center">
+        <p>&copy; 2016 Nguyen Huu Dang.</p>
       </footer>
     </div>
   </body>
